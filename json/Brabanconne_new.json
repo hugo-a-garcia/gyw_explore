@@ -1,0 +1,173 @@
+{
+    "name": "Brabanconne",
+    "slides": [
+        {
+            "elements": [
+                {
+                    "type": "RectangleDrawing",
+                    "left": 600,
+                    "top": 60,
+                    "color": 4278190080,
+                    "width": 48,
+                    "height": 48
+                },
+                {
+                    "type": "RectangleDrawing",
+                    "left": 650,
+                    "top": 60,
+                    "color": 4294967040,
+                    "width": 48,
+                    "height": 48
+                },
+                {
+                    "type": "RectangleDrawing",
+                    "left": 700,
+                    "top": 60,
+                    "color": 4294901760,
+                    "width": 48,
+                    "height": 48
+                },
+                {
+                    "type": "TextDrawing",
+                    "left": 60,
+                    "top": 100,
+                    "text": "Ô Belgique, ô mère, chérie,",
+                    "size": 28,
+                    "color": 4278190080,
+                    "font": "robmn",
+                    "max_width": null,
+                    "max_lines": 1
+                },
+                {
+                    "type": "TextDrawing",
+                    "left": 60,
+                    "top": 150,
+                    "text": "À toi nos coeurs, à toi nos bras !",
+                    "size": 28,
+                    "color": 4278190080,
+                    "font": "robmn",
+                    "max_width": null,
+                    "max_lines": 1
+                },
+                {
+                    "type": "TextDrawing",
+                    "left": 60,
+                    "top": 200,
+                    "text": "À toi notre sang, ô Patrie !",
+                    "size": 28,
+                    "color": 4278190080,
+                    "font": "robmn",
+                    "max_width": null,
+                    "max_lines": 1
+                },
+                {
+                    "type": "TextDrawing",
+                    "left": 60,
+                    "top": 250,
+                    "text": "Nous le jurons tous tu vivras !",
+                    "size": 28,
+                    "color": 4278190080,
+                    "font": "robmn",
+                    "max_width": null,
+                    "max_lines": 1
+                },
+                {
+                    "type": "TextDrawing",
+                    "left": 60,
+                    "top": 300,
+                    "text": "Tu vivras toujours grande et belle",
+                    "size": 28,
+                    "color": 4278190080,
+                    "font": "robmn",
+                    "max_width": null,
+                    "max_lines": 1
+                }
+            ],
+            "background_color": 4294967295
+        },
+        {
+            "elements": [
+                {
+                    "type": "RectangleDrawing",
+                    "left": 600,
+                    "top": 60,
+                    "color": 4278190080,
+                    "width": 48,
+                    "height": 48
+                },
+                {
+                    "type": "RectangleDrawing",
+                    "left": 650,
+                    "top": 60,
+                    "color": 4294967040,
+                    "width": 48,
+                    "height": 48
+                },
+                {
+                    "type": "RectangleDrawing",
+                    "left": 700,
+                    "top": 60,
+                    "color": 4294901760,
+                    "width": 48,
+                    "height": 48
+                },
+                {
+                    "type": "TextDrawing",
+                    "left": 60,
+                    "top": 100,
+                    "text": "Et ton invincible unité",
+                    "size": 28,
+                    "color": 4278190080,
+                    "font": "robmn",
+                    "max_width": null,
+                    "max_lines": 1
+                },
+                {
+                    "type": "TextDrawing",
+                    "left": 60,
+                    "top": 150,
+                    "text": "Aura pour devise immortelle :",
+                    "size": 28,
+                    "color": 4278190080,
+                    "font": "robmn",
+                    "max_width": null,
+                    "max_lines": 1
+                },
+                {
+                    "type": "TextDrawing",
+                    "left": 60,
+                    "top": 200,
+                    "text": "Le Roi, la Loi, la Liberté !",
+                    "size": 28,
+                    "color": 4278190080,
+                    "font": "robmn",
+                    "max_width": null,
+                    "max_lines": 1
+                },
+                {
+                    "type": "TextDrawing",
+                    "left": 60,
+                    "top": 250,
+                    "text": "Le Roi, la Loi, la Liberté !",
+                    "size": 28,
+                    "color": 4278190080,
+                    "font": "robmn",
+                    "max_width": null,
+                    "max_lines": 1
+                },
+                {
+                    "type": "TextDrawing",
+                    "left": 60,
+                    "top": 300,
+                    "text": "Le Roi, la Loi, la Liberté !",
+                    "size": 28,
+                    "color": 4278190080,
+                    "font": "robmn",
+                    "max_width": null,
+                    "max_lines": 1
+                }
+            ],
+            "background_color": 4294967295
+        }
+    ]
+}

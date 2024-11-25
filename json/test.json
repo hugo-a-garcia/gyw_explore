@@ -1,0 +1,27 @@
+{
+  "name": "Hello World",
+  "drawings": [
+    { "type": "blank_screen", "color": "ffffffff" },
+    {
+      "type": "icon",
+      "left": 60,
+      "top": 50,
+      "icon": "Up",
+      "data": "up",
+      "color": "ff000000",
+      "scale": 1.0
+    },
+    {
+      "type": "text",
+      "left": 220,
+      "top": 50,
+      "data": "Hello world",
+      "text": "Hello world",
+      "font": 1,
+      "size": null,
+      "color": "ff000000",
+      "max_width": null,
+      "max_lines": 1
+    }
+  ]
+}
