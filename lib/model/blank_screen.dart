@@ -1,21 +1,41 @@
+// blank_screen.dart
+// 1. import freezed_annotation
 import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gyw/flutter_gyw.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-/// A drawing to reset the content of the screen and its background color
-class BlankScreen extends GYWDrawing {
-  /// The type of the [BlankScreen] drawing
-  static const String type = "blank_screen";
+// 2. add 'part' files
+part 'blank_screen.freezed.dart';
+part 'blank_screen.g.dart';
 
-  /// The background color. If null, the screen will be cleared with the latest background color used.
-  final Color? color;
+// 3. add @freezed annotation
+@freezed
+// 4. define a class with a mixin
+class BlankScreen with _$BlankScreen {
+  //4.1 define a private contructor to force extend and not implement
+  const BlankScreen._();
+  // 5. define a factory constructor
+  // 5.1 Add the implementation of the abstract class GYWDrawing
 
-  const BlankScreen({this.color});
+  final int top = 0;
+  final int left = 0;
 
-  @override
-  List<GYWBtCommand> toCommands() {
+  @Implements<GYWDrawing>()
+  factory BlankScreen(
+      {
+      // 6. list all the arguments/properties
+     Color? color,
+      // 7. assign it with the `_BlankScreen` class constructor
+      }) = _BlankScreen;
+
+  // 8. define another factory constructor to parse from json
+  factory BlankScreen.fromJson(Map<String, dynamic> json) =>
+      _$BlankScreenFromJson(json);
+      
+      List<GYWBtCommand> toCommands() {
     final controlBytes = BytesBuilder();
     controlBytes.add(int8Bytes(GYWControlCode.clear.value));
 
@@ -31,39 +51,4 @@ class BlankScreen extends GYWDrawing {
       ),
     ];
   }
-
-  // @override
-  // String toString() {
-  //   return "Drawing: blank screen $color";
-  // }
-
-  // /// Deserializes a [BlankScreen] from JSON data
-  // factory BlankScreen.fromJson(Map<String, dynamic> data) {
-  //   return BlankScreen(
-  //     color: colorFromHex(data["color"] as String?),
-  //   );
-  // }
-
-  // @override
-  // Map<String, dynamic> toJson() {
-  //   return {
-  //     "type": type,
-  //     "color": color != null ? hexFromColor(color!) : null,
-  //   };
-  // }
-
-  // @override
-  // bool operator ==(Object other) {
-  //   if (other is BlankScreen) {
-  //     return color?.value == other.color?.value;
-  //   } else {
-  //     return false;
-  //   }
-  // }
-
-  // @override
-  // int get hashCode => 23 * color.hashCode;
-
-  @override
-  dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }

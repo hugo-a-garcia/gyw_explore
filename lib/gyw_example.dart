@@ -4,11 +4,10 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_gyw/flutter_gyw.dart' as gyw;
 
-//import 'model/drawings.dart' as model_drawings;
 import 'model/icon_drawing.dart';
 import 'model/slides.dart';
 import 'model/text_drawing.dart';
-import 'model/blank_screen.dart';
+import 'model/blank_screen_gyw.dart';
 
 class GYWExampleScreen extends StatefulWidget {
   const GYWExampleScreen({super.key});
@@ -44,9 +43,9 @@ class _GYWExampleScreenState extends State<GYWExampleScreen> {
     ], name: 'Hello World');
 
     //Print the model as JSON
-    // final jasonMap = slides.toJson();
-    // final encodedJason = jsonEncode(jasonMap);
-    // print(encodedJason);
+    final jasonMap = slides.toJson();
+    final encodedJason = jsonEncode(jasonMap);
+    print(encodedJason);
 
     for (final gyw.GYWDrawing drawing in slides.drawings) {
       print(">>>>>>>>>>>>>>>>  SENDING DRAWING\n");

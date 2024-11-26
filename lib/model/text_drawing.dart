@@ -38,15 +38,15 @@ class TextDrawing extends GYWDrawing {
   /// The value 0 is special and disables the limit.
   final int maxLines;
 
-  TextDrawing({
+  const TextDrawing({
     required this.text,
     this.font,
     this.size,
     this.color = Colors.black,
     this.maxWidth,
     this.maxLines = 1,
-    left = 0,
-    top = 0,
+    super.left = 0,
+    super.top = 0,
   });
 
   @override

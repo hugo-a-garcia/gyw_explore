@@ -31,7 +31,7 @@ class IconDrawing extends GYWDrawing {
   /// Minimum is 0.01, maximum is 13.7.
   final double scale;
 
-  IconDrawing(
+  const IconDrawing(
     GYWIcon this.icon, {
     top,
     left,
@@ -40,7 +40,7 @@ class IconDrawing extends GYWDrawing {
   }) : customIconFilename = null;
 
   /// Creates a custom icon, i.e. an icon whose image is not in the library
-  IconDrawing.custom(
+  const IconDrawing.custom(
     String this.customIconFilename, {
     top,
     left,
