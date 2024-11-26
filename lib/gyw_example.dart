@@ -3,11 +3,12 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gyw/flutter_gyw.dart' as gyw;
-// ignore: implementation_imports
-//import 'package:flutter_gyw/src/drawings.dart' as gyw;
 
-import 'package:gyw_explore/model/drawings.dart' as model;
-import 'package:gyw_explore/model/slides.dart';
+//import 'model/drawings.dart' as model_drawings;
+import 'model/icon_drawing.dart';
+import 'model/slides.dart';
+import 'model/text_drawing.dart';
+import 'model/blank_screen.dart';
 
 class GYWExampleScreen extends StatefulWidget {
   const GYWExampleScreen({super.key});
@@ -32,9 +33,9 @@ class _GYWExampleScreenState extends State<GYWExampleScreen> {
   Future<void> _sendExampleData() async {
     // Using thhe the data Model.
     Slides slides = Slides(drawings: <gyw.GYWDrawing>[
-      model.BlankScreen(color: Colors.white),
-      model.IconDrawing(gyw.GYWIcon.up, top: 50, left: 60),
-      model.TextDrawing(
+      BlankScreen(color: Colors.white),
+      IconDrawing(gyw.GYWIcon.up, top: 50, left: 60),
+      TextDrawing(
         text: "Hello world",
         top: 50,
         left: 220,
@@ -43,11 +44,12 @@ class _GYWExampleScreenState extends State<GYWExampleScreen> {
     ], name: 'Hello World');
 
     //Print the model as JSON
-    final jasonMap = slides.toJson();
-    final encodedJason = jsonEncode(jasonMap);
-    print(encodedJason);
+    // final jasonMap = slides.toJson();
+    // final encodedJason = jsonEncode(jasonMap);
+    // print(encodedJason);
 
     for (final gyw.GYWDrawing drawing in slides.drawings) {
+      print(">>>>>>>>>>>>>>>>  SENDING DRAWING\n");
       //await connectedDevice?.displayDrawing(drawing);
       await connectedDevice?.sendDrawing(drawing);
     }
